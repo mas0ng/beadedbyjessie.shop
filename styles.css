@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'ambient-black';
+    src: url('fonts/ambient-black.otf') format('opentype'); /* Specify OpenType format */
+    font-weight: normal; /* Optional */
+    font-style: normal; /* Optional */
+}
+
+@font-face {
+    font-family: 'ambient-light';
+    src: url('fonts/ambient-light.otf') format('opentype'); /* Specify OpenType format */
+    font-weight: normal; /* Optional */
+    font-style: normal; /* Optional */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #e0e0e0;
+	align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/homescreen/hero.png');
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: white;
+    width: 98%; /* Keeps the width at 98% */
+    margin: 2vh auto; /* Center with vertical spacing */
+    border-radius: 30px; /* Keeps rounded corners */
+}
+
+
+.hero h1 {
+    font-size: 4rem;
+    color: #1f1f1f;
+	font-family: 'ambient-black', sans-serif;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #1f1f1f;
+	font-family: 'ambient-light', sans-serif;
+}
+
+@media (max-width: 768px) {
+	.hero h1 {
+		font-size: 3rem;
+		color: #1f1f1f;
+		font-family: 'ambient-black', sans-serif;
+	}
+
+	.hero h2 {
+		font-size: 1.8rem;
+		color: #1f1f1f;
+		font-family: 'ambient-light', sans-serif;
+	}
+}
+
+@media (max-width: 510px) {
+	.hero h1 {
+		font-size: 2rem;
+		color: #1f1f1f;
+		font-family: 'ambient-black', sans-serif;
+	}
+
+	.hero h2 {
+		font-size: 1rem;
+		color: #1f1f1f;
+		font-family: 'ambient-light', sans-serif;
+	}
+}
+
+.hero depoxt-gradient {
+	background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+	-webkit-text-fill-color: transparent; 
+	-webkit-background-clip: text; 
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+.cta {
+    color: black;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 24px 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.5s ease;
+    font-family: 'ambient-light', sans-serif;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White shadow */
+    position: relative;
+    overflow: hidden; /* Ensure the image stays within the button */
+    text-align: center;
+    z-index: 1; /* Ensure text stays on top initially */
+}
+
+/* Text fade-out effect */
+.cta:hover {
+    color: transparent; /* Fade text out */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+/* Sliding image effect */
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Center horizontally */
+    width: 30%; /* Image width is 50% of button */
+    height: 30%; /* Image height is 50% of button */
+    transform: translate(-50%, -50%); /* Center the image */
+    background-image: url('images/homescreen/sparkling.png'); /* Replace with your image URL */
+    background-size: contain; /* Maintain aspect ratio, scaling to fit */
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s ease, left 0.5s ease; /* Smooth slide-in effect */
+    opacity: 0; /* Initially hidden */
+    z-index: 0; /* Behind the text initially */
+}
+
+.cta:hover::before {
+    left: 50%; /* Ensure it stays centered */
+    opacity: 1; /* Make the image visible */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
